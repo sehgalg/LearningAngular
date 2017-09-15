@@ -1,0 +1,25 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<md-toolbar color="primary">
+  <span>{{title}}</span>
+</md-toolbar>
+
+<form class="example-form">
+  <md-form-field class="example-full-width">
+    <input mdInput placeholder="Email" [formControl]="emailFormControl">
+    <md-error *ngIf="emailFormControl.hasError('pattern')">
+      Please enter a valid email address
+    </md-error>
+    <md-error *ngIf="emailFormControl.hasError('required')">
+      Email is <strong>required</strong>
+    </md-error>
+  </md-form-field>
+  <md-form-field class="example-full-width">
+    <input mdInput placeholder="Password" [formControl]="passwordFormControl">
+    <md-error *ngIf="emailFormControl.hasError('pattern')">
+      Please enter a valid email address
+    </md-error>
+    <md-error *ngIf="emailFormControl.hasError('required')">
+      Email is <strong>required</strong>
+    </md-error>
+  </md-form-field>
+</form>
